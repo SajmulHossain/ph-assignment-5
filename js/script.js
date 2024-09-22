@@ -18,32 +18,18 @@ donationBtn.addEventListener("click", function () {
   historyContainer.classList.add("hidden");
 });
 
-
-
-
-
 const btnNoakhali = document.getElementById("btnNoakhali");
 
-
-
 btnNoakhali.addEventListener("click", function () {
-    const totalAmount = document.getElementById('totalAmount');
-    let totalAmountValue = parseFloat(totalAmount.innerText);
-  const amountNoakhali =document.getElementById("amountNoakhali");
-  let amountNoakhaliValue = parseFloat(amountNoakhali.innerText);
+  const totalAmount = document.getElementById("totalAmount");
+  let totalAmountValue = Number(totalAmount.innerText);
+  const amountNoakhali = document.getElementById("amountNoakhali");
+  let amountNoakhaliValue = Number(amountNoakhali.innerText);
   const inputNoakhali = document.getElementById("inputNoakhali");
-  const inputNoakhaliValue = parseFloat(inputNoakhali.value);
-
+  const inputNoakhaliValue = Number(inputNoakhali.value);
   const insufficientNoakhali = document.getElementById("insufficientNoakhali");
-
-  if (inputNoakhaliValue > totalAmountValue) {
-    insufficientNoakhali.classList.remove("hidden");
-    return;
-  } else {
-    insufficientNoakhali.classList.add("hidden");
-  }
-
   const invalidNoakhali = document.getElementById("invalidNoakhali");
+  const remainBalance = totalAmountValue - inputNoakhaliValue;
 
   if (isNaN(inputNoakhaliValue) || inputNoakhaliValue <= 0) {
     invalidNoakhali.classList.remove("hidden");
@@ -52,15 +38,18 @@ btnNoakhali.addEventListener("click", function () {
     invalidNoakhali.classList.add("hidden");
   }
 
-  const remainBalance = totalAmountValue - inputNoakhaliValue;
-
+  if (inputNoakhaliValue > totalAmountValue) {
+    insufficientNoakhali.classList.remove("hidden");
+    return;
+  } else {
+    insufficientNoakhali.classList.add("hidden");
+  }
 
   totalAmount.innerText = remainBalance;
   console.log(totalAmount.innerText);
- 
 
   amountNoakhaliValue += inputNoakhaliValue;
-amountNoakhali.textContent = amountNoakhaliValue;
+  amountNoakhali.textContent = amountNoakhaliValue;
 
-  inputNoakhali.value = '';
+  inputNoakhali.value = "";
 });
