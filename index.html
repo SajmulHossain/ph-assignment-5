@@ -48,30 +48,32 @@
               <div>
                 <img src="assets/coin.png" alt="this is  a coin image" />
               </div>
-              <p class="font-medium text-xl"><span>5000</span> BDT</p>
+              <p class="font-medium text-xl"><span id="totalAmount">5000</span> BDT</p>
             </div>
           </nav>
       </div>
 
       <!-- mobile nav -->
-      <nav class="lg:hidden space-y-3 bg-nav p-4">
-        <div class="flex gap-2 items-center">
-          <div>
-            <img src="assets/logo.png" alt="this is a logo image" />
-          </div>
-          <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
-        </div>
-
-        <div class="flex justify-between items-center">
-          <button id="mobileBlogBtn" class="btn bg-main text-lg font-semibold">Blog</button>
+      <div class="bg-nav bg-opacity-5 py-3 lg:hidden">
+        <nav class="space-y-3 p-4">
           <div class="flex gap-2 items-center">
             <div>
-                <img src="assets/coin.png" alt="this is a coin logo" />
+              <img src="assets/logo.png" alt="this is a logo image" />
             </div>
-            <p class="text-lg font-medium"><span>5000</span> BDT</p>
+            <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
           </div>
-        </div>
-      </nav>
+  
+          <div class="flex justify-between items-center">
+            <button id="mobileBlogBtn" class="btn bg-main text-lg font-semibold">Blog</button>
+            <div class="flex gap-2 items-center">
+              <div>
+                  <img src="assets/coin.png" alt="this is a coin logo" />
+              </div>
+              <p class="text-lg font-medium"><span>5000</span> BDT</p>
+            </div>
+          </div>
+        </nav>
+      </div>
 
 
       <div class="text-center mt-5 lg:mt-10">
@@ -96,7 +98,7 @@
                             <img src="assets/coin.png" alt="this is coin logo">
                         </div>
                         <p>
-                            <span>0</span> BDT
+                            <span id="amountNoakhali">0</span> BDT
                         </p>
                     </div>
     
@@ -106,12 +108,17 @@
                         The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                     </p>
     
-                    <div class="mt-6 mb-4">
-                        <input class="input input-bordered w-full" type="text" placeholder="Write Donation Amount">
+                    <div class="mt-6">
+                        <input type="text" id="inputNoakhali" class="input input-bordered w-full" placeholder="Write Donation Amount">
+                    </div>
+
+                    <div class="mt-1">
+                      <p id="invalidNoakhali" class="hidden text-red-600">Invalid Amount</p>
+                      <p id="insufficientNoakhali" class="hidden text-red-600">Insufficient Balance</p>
                     </div>
     
-                    <div>
-                        <button class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
+                    <div class="mt-4">
+                        <button id="btnNoakhali" class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
                     </div>
                 </div>
             </div>
