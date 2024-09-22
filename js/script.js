@@ -60,7 +60,7 @@ btnNoakhali.addEventListener("click", function () {
  
 
   amountNoakhaliValue += inputNoakhaliValue;
-amountNoakhali.innerText = amountNoakhaliValue;
+amountNoakhali.textContent = amountNoakhaliValue;
 
   inputNoakhali.value = '';
 });
