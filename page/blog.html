@@ -34,8 +34,97 @@
       };
     </script>
   </head>
-  <body>
-    <button id="homeBtn" class="btn bg-main">Home</button>
+  <body class="font-lexend">
+    <header class="lg:px-0 sticky top-0 z-50 pb-4">
+      <div class="bg-nav py-3 hidden lg:block">
+        <!-- lg device nav -->
+        <nav class="max-w-[1440px] m-auto flex justify-between items-center">
+            <button id="homeBtn" class="btn bg-main font-semibold text-xl">Home</button>
+            <div class="flex items-center gap-2">
+              <div>
+                <img src="../assets/logo.png" alt="this is a logo" />
+              </div>
+              <h3 class="font-semibold text-xl">Donate Bangladesh</h3>
+            </div>
+    
+            <div class="flex gap-2 items-center">
+              <div>
+                <img src="../assets/coin.png" alt="this is  a coin image" />
+              </div>
+              <p class="font-medium text-xl"><span>5000</span> BDT</p>
+            </div>
+          </nav>
+      </div>
+
+      <!-- mobile nav -->
+      <nav class="lg:hidden space-y-3 bg-nav p-4">
+        <div class="flex gap-2 items-center">
+          <div>
+            <img src="../assets/logo.png" alt="this is a logo image" />
+          </div>
+          <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <button id="mobileHomeBtn" class="btn bg-main text-lg font-semibold">Home</button>
+          <div class="flex gap-2 items-center">
+            <div>
+                <img src="../assets/coin.png" alt="this is a coin logo" />
+            </div>
+            <p class="text-lg font-medium"><span>5000</span> BDT</p>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+
+    <main class="max-w-[1440px] mx-auto mt-20 px-4 lg:p-0">
+
+      <h2 class="font-extrabold text-4xl mb-8">Important FAQ ?</h2>
+
+      <div class="join join-vertical w-full -z-50">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is the Document Obect Model (DOM)</div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page. <br>
+
+              A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How do you select on element from the DOM?</div>
+          <div class="collapse-content">
+            <p> <span>I can select element on DOM by,<br></span>
+              <ol>
+                <li>Get element by ID</li>
+                <li>Get elements by TagName</li>
+                <li>Get elements by querySelector</li>
+                <li>Get elements by querySelectorAll</li>
+                <li>Get elements by className</li>
+              </ol>
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM</div>
+          <div class="collapse-content">
+            <p>
+              To manipulate an element's attributes and styles in the DOM, you can access and modify them directly. For attributes, retrieve or set values dynamically to update elements like images or inputs. Styles can be adjusted by changing CSS properties, allowing you to create responsive, interactive visual changes on the page.</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 
   <script src="../js/utilities.js"></script>

@@ -2,3 +2,4 @@
 
 
 redirectToHome('homeBtn');
+redirectToHome('mobileHomeBtn');
