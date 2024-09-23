@@ -21,14 +21,14 @@ donationBtn.addEventListener("click", function () {
 
 
 document.getElementById("btnNoakhali").addEventListener('click', function() {
-  donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali');
+  donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali','textNoakhali');
 })
 
 
 document.getElementById('btnFeni').addEventListener('click', function() {
-  donation('amountFeni','inputFeni','insufficientFeni','invalidFeni')
+  donation('amountFeni','inputFeni','insufficientFeni','invalidFeni','textFeni');
 })
 document.getElementById('donateBtn').addEventListener('click', function() {
-  donation('amount','inputAmount','insufficientMsg','invalidMsg')
+  donation('amount','inputAmount','insufficientMsg','invalidMsg','text')
 })
 

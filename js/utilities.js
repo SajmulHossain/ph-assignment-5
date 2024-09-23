@@ -20,7 +20,7 @@ function btnToggle(clickBtn, secondBtn) {
 }
 
 
-function donation(donatedAmount,input, insufficient,invalid) {
+function donation(donatedAmount,input, insufficient,invalid,text) {
     const totalAmount = document.getElementById("totalAmount");
   let totalAmountValue = Number(totalAmount.innerText);
   
@@ -56,4 +56,27 @@ donatedAmountValue += inputValue;
 donateAmount.innerText = donatedAmountValue;
 
 inputAmount.value = '';
+
+document.getElementById('historyBox').classList.add('hidden');
+
+const date = new Date().toLocaleString();
+const historyEl = document.getElementById('history');
+
+const div = document.createElement('div');
+div.classList.add('border', 'border-para', 'p-4', 'lg:p-8', 'rounded-2xl');
+
+const h3 = document.createElement('h3');
+h3.classList.add('font-bold', 'lg:text-xl','mb-4');
+h3.innerText = `${inputValue} Taka is donated for ${text}`;
+
+const p = document.createElement('p');
+p.classList.add('font-light' ,'text-para');
+
+p.innerText = `Date : ${date}`;
+
+
+div.append(h3,p);
+historyEl.appendChild(div);
+
+
 }
