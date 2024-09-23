@@ -29,27 +29,31 @@ btnNoakhali.addEventListener("click", function () {
   const inputNoakhaliValue = Number(inputNoakhali.value);
   const insufficientNoakhali = document.getElementById("insufficientNoakhali");
   const invalidNoakhali = document.getElementById("invalidNoakhali");
-  const remainBalance = totalAmountValue - inputNoakhaliValue;
-
+  
   if (isNaN(inputNoakhaliValue) || inputNoakhaliValue <= 0) {
     invalidNoakhali.classList.remove("hidden");
     return;
   } else {
     invalidNoakhali.classList.add("hidden");
   }
-
+  
   if (inputNoakhaliValue > totalAmountValue) {
     insufficientNoakhali.classList.remove("hidden");
     return;
   } else {
     insufficientNoakhali.classList.add("hidden");
   }
-
+  
+  const remainBalance = totalAmountValue - inputNoakhaliValue;
   totalAmount.innerText = remainBalance;
-  console.log(totalAmount.innerText);
+
 
   amountNoakhaliValue += inputNoakhaliValue;
-  amountNoakhali.textContent = amountNoakhaliValue;
+  amountNoakhali.innerText = amountNoakhaliValue;
 
   inputNoakhali.value = "";
 });
+
+// btnNoakhali.addEventListener('click', function() {
+//   donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali');
+// })
