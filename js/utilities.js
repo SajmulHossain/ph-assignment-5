@@ -44,6 +44,7 @@ function donation(donatedAmount, input, insufficient, invalid, text) {
   const invalidMsg = document.getElementById(invalid);
   const remainBalance = totalAmountValue - inputValue;
   const textContent = document.getElementById(text).innerText;
+  const modal = document.getElementById('modalPara');
 
   if (isNaN(inputValue) || inputValue <= 0) {
     invalidMsg.classList.remove("hidden");
@@ -84,4 +85,8 @@ function donation(donatedAmount, input, insufficient, invalid, text) {
 
   div.append(h3, p);
   historyEl.appendChild(div);
+
+  modal.innerText = textContent;
+
+  my_modal_1.showModal();
 }
