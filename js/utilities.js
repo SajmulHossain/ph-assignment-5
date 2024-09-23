@@ -35,6 +35,7 @@ function donation(donatedAmount,input, insufficient,invalid,text) {
   const insufficientMsg = document.getElementById(insufficient);
   const invalidMsg = document.getElementById(invalid);
   const remainBalance = totalAmountValue - inputValue;
+  const textContent = document.getElementById('text').innerText;
   
 
   if(isNaN(inputValue) || inputValue <= 0) {
@@ -67,7 +68,7 @@ div.classList.add('border', 'border-para', 'p-4', 'lg:p-8', 'rounded-2xl');
 
 const h3 = document.createElement('h3');
 h3.classList.add('font-bold', 'lg:text-xl','mb-4');
-h3.innerText = `${inputValue} Taka is donated for ${text}`;
+h3.innerText = `${inputValue} Taka is donated for ${textContent}`;
 
 const p = document.createElement('p');
 p.classList.add('font-light' ,'text-para');
