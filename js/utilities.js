@@ -52,7 +52,6 @@ function donation(donatedAmount,input, insufficient,invalid) {
   }
 
 totalAmount.innerText = remainBalance;
-console.log(totalAmount.innerText);
 donatedAmountValue += inputValue;
 donateAmount.innerText = donatedAmountValue;
 

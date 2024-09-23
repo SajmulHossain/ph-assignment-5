@@ -18,42 +18,17 @@ donationBtn.addEventListener("click", function () {
   historyContainer.classList.add("hidden");
 });
 
-const btnNoakhali = document.getElementById("btnNoakhali");
-
-btnNoakhali.addEventListener("click", function () {
-  const totalAmount = document.getElementById("totalAmount");
-  let totalAmountValue = Number(totalAmount.innerText);
-  const amountNoakhali = document.getElementById("amountNoakhali");
-  let amountNoakhaliValue = Number(amountNoakhali.innerText);
-  const inputNoakhali = document.getElementById("inputNoakhali");
-  const inputNoakhaliValue = Number(inputNoakhali.value);
-  const insufficientNoakhali = document.getElementById("insufficientNoakhali");
-  const invalidNoakhali = document.getElementById("invalidNoakhali");
-  
-  if (isNaN(inputNoakhaliValue) || inputNoakhaliValue <= 0) {
-    invalidNoakhali.classList.remove("hidden");
-    return;
-  } else {
-    invalidNoakhali.classList.add("hidden");
-  }
-  
-  if (inputNoakhaliValue > totalAmountValue) {
-    insufficientNoakhali.classList.remove("hidden");
-    return;
-  } else {
-    insufficientNoakhali.classList.add("hidden");
-  }
-  
-  const remainBalance = totalAmountValue - inputNoakhaliValue;
-  totalAmount.innerText = remainBalance;
 
 
-  amountNoakhaliValue += inputNoakhaliValue;
-  amountNoakhali.innerText = amountNoakhaliValue;
+document.getElementById("btnNoakhali").addEventListener('click', function() {
+  donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali');
+})
 
-  inputNoakhali.value = "";
-});
 
-// btnNoakhali.addEventListener('click', function() {
-//   donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali');
-// })
+document.getElementById('btnFeni').addEventListener('click', function() {
+  donation('amountFeni','inputFeni','insufficientFeni','invalidFeni')
+})
+document.getElementById('donateBtn').addEventListener('click', function() {
+  donation('amount','inputAmount','insufficientMsg','invalidMsg')
+})
+

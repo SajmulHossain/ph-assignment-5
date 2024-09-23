@@ -134,7 +134,7 @@
                             <img src="assets/coin.png" alt="this is coin logo">
                         </div>
                         <p>
-                            <span>600</span> BDT
+                            <span id="amountFeni">600</span> BDT
                         </p>
                     </div>
     
@@ -144,12 +144,17 @@
                         The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                     </p>
     
-                    <div class="mt-6 mb-4">
-                        <input class="input input-bordered w-full" type="text" placeholder="Write Donation Amount">
+                    <div class="mt-6">
+                        <input id="inputFeni" class="input input-bordered w-full" type="text" placeholder="Write Donation Amount">
+                    </div>
+
+                    <div class="mt-1"></div>
+                      <p id="invalidFeni" class="hidden text-red-600">Invalid Amount</p>
+                      <p id="insufficientFeni" class="hidden text-red-600">Insufficient Balance</p>
                     </div>
     
-                    <div>
-                        <button class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
+                    <div class="mt-4">
+                        <button id="btnFeni" class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -165,7 +170,7 @@
                             <img src="assets/coin.png" alt="this is coin logo">
                         </div>
                         <p>
-                            <span>2400</span> BDT
+                            <span id="amount">2400</span> BDT
                         </p>
                     </div>
     
@@ -175,12 +180,17 @@
                         The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                     </p>
     
-                    <div class="mt-6 mb-4">
-                        <input class="input input-bordered w-full" type="text" placeholder="Write Donation Amount">
+                    <div class="mt-6">
+                        <input id="inputAmount" class="input input-bordered w-full" type="text" placeholder="Write Donation Amount">
+                    </div>
+
+                    <div class="mt-1"></div>
+                      <p id="invalidMsg" class="hidden text-red-600">Invalid Amount</p>
+                      <p id="insufficientMsg" class="hidden text-red-600">Insufficient Balance</p>
                     </div>
     
-                    <div>
-                        <button class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
+                    <div class="mt-4">
+                        <button id="donateBtn" class="btn bg-main w-full lg:font-semibold lg:text-xl">Donate Now</button>
                     </div>
                 </div>
             </div>
