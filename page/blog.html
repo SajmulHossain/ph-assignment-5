@@ -35,47 +35,27 @@
     </script>
   </head>
   <body class="font-lexend">
-    <header class="lg:px-0 sticky top-0 z-50 pb-4">
-      <div class="bg-nav py-3 hidden lg:block">
-        <!-- lg device nav -->
-        <nav class="max-w-[1440px] m-auto flex justify-between items-center">
-            <button id="homeBtn" class="btn bg-main font-semibold text-xl">Home</button>
-            <div class="flex items-center gap-2">
+    <header class="sticky top-0 backdrop-blur-xl z-50">
+      <div class="bg-nav bg-opacity-50 py-3">
+        <nav class="max-w-[1440px] m-auto grid grid-cols-3 grid-rows-2 lg:grid-rows-none justify-between items-center gap-y-3 px-4 lg:px-0">
+            <div>
+              <button id="homeBtn" class="btn bg-main font-semibold text-xl">Home</button>
+            </div>
+            <div class="flex items-center gap-2 row-start-1 row-span-1 col-start-1 -col-end-1 justify-start lg:col-start-2 lg:col-span-1 lg:justify-center">
               <div>
                 <img src="../assets/logo.png" alt="this is a logo" />
               </div>
               <h3 class="font-semibold text-xl">Donate Bangladesh</h3>
             </div>
     
-            <div class="flex gap-2 items-center">
+            <div class="flex gap-2 items-center row-start-2 row-end-3 col-start-3 col-span-1 lg:col-start-3 lg:col-span-1 lg:row-start-1 justify-end">
               <div>
                 <img src="../assets/coin.png" alt="this is  a coin image" />
               </div>
-              <p class="font-medium text-xl"><span>5000</span> BDT</p>
+              <p class="font-medium text-xl flex justify-between gap-[2px]"><span id="totalAmount">5000</span> <span>BDT</span></p>
             </div>
           </nav>
       </div>
-
-      <!-- mobile nav -->
-      <nav class="lg:hidden space-y-3 bg-nav p-4">
-        <div class="flex gap-2 items-center">
-          <div>
-            <img src="../assets/logo.png" alt="this is a logo image" />
-          </div>
-          <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
-        </div>
-
-        <div class="flex justify-between items-center">
-          <button id="mobileHomeBtn" class="btn bg-main text-lg font-semibold">Home</button>
-          <div class="flex gap-2 items-center">
-            <div>
-                <img src="../assets/coin.png" alt="this is a coin logo" />
-            </div>
-            <p class="text-lg font-medium"><span>5000</span> BDT</p>
-          </div>
-        </div>
-      </nav>
-
     </header>
 
 
@@ -125,8 +105,8 @@
         </div>
       </div>
     </main>
+    <script src="../js/utilities.js"></script>
+    <script src="../js/blog.js"></script>
   </body>
 
-  <script src="../js/utilities.js"></script>
-  <script src="../js/blog.js"></script>
 </html>

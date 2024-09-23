@@ -1,5 +1,5 @@
 redirectToBlog("blogBtn");
-redirectToBlog("mobileBlogBtn");
+
 
 const donationBtn = document.getElementById("donationBtn");
 const historyBtn = document.getElementById("historyBtn");

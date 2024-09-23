@@ -2,4 +2,4 @@
 
 
 redirectToHome('homeBtn');
-redirectToHome('mobileHomeBtn');
+
