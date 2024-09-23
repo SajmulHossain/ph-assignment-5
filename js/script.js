@@ -1,6 +1,5 @@
 redirectToBlog("blogBtn");
 
-
 const donationBtn = document.getElementById("donationBtn");
 const historyBtn = document.getElementById("historyBtn");
 const donationContainer = document.getElementById("donation");
@@ -18,17 +17,25 @@ donationBtn.addEventListener("click", function () {
   historyContainer.classList.add("hidden");
 });
 
+document.getElementById("btnNoakhali").addEventListener("click", function () {
+  donation(
+    "amountNoakhali",
+    "inputNoakhali",
+    "insufficientNoakhali",
+    "invalidNoakhali",
+    "textNoakhali"
+  );
+});
 
-
-document.getElementById("btnNoakhali").addEventListener('click', function() {
-  donation('amountNoakhali','inputNoakhali','insufficientNoakhali', 'invalidNoakhali','textNoakhali');
-})
-
-
-document.getElementById('btnFeni').addEventListener('click', function() {
-  donation('amountFeni','inputFeni','insufficientFeni','invalidFeni','textFeni');
-})
-document.getElementById('donateBtn').addEventListener('click', function() {
-  donation('amount','inputAmount','insufficientMsg','invalidMsg','text')
-})
-
+document.getElementById("btnFeni").addEventListener("click", function () {
+  donation(
+    "amountFeni",
+    "inputFeni",
+    "insufficientFeni",
+    "invalidFeni",
+    "textFeni"
+  );
+});
+document.getElementById("donateBtn").addEventListener("click", function () {
+  donation("amount", "inputAmount", "insufficientMsg", "invalidMsg", "text");
+});
