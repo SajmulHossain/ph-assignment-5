@@ -48,6 +48,7 @@ function donation(donatedAmount, input, insufficient, invalid, text) {
 
   if (isNaN(inputValue) || inputValue <= 0) {
     invalidMsg.classList.remove("hidden");
+    alert('⚠️Invalid Amount');
     return;
   } else {
     invalidMsg.classList.add("hidden");
@@ -55,6 +56,7 @@ function donation(donatedAmount, input, insufficient, invalid, text) {
 
   if (inputValue > totalAmountValue) {
     insufficientMsg.classList.remove("hidden");
+    alert('Insufficient Balance')
     return;
   } else {
     insufficientMsg.classList.add("hidden");
