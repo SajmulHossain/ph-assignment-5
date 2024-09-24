@@ -56,7 +56,7 @@ function donation(donatedAmount, input, insufficient, invalid, text) {
 
   if (inputValue > totalAmountValue) {
     insufficientMsg.classList.remove("hidden");
-    alert('Insufficient Balance')
+    alert('⚠️Insufficient Balance')
     return;
   } else {
     insufficientMsg.classList.add("hidden");
